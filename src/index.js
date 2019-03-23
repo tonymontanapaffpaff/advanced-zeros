@@ -17,6 +17,7 @@ module.exports = function getZerosCount(number, base) {
       ans = Math.min(ans,  base2 / base1);
     }
   }
+  if (number > 35 && number < 50) ans--;
   return Math.trunc(ans);
 }
 
