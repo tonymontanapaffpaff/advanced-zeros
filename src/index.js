@@ -1,35 +1,31 @@
 module.exports = function getZerosCount(number, base) {
-  // your implementation
-let j = 0;
-let i = 2;
-let a = new Array();
-do
-{
- if (base % i === 0) 
- {
-  a[j] = i;
-  j++;
-  base = base / i;
- }
- else
- {
-  i++;
- }
-}
-while (i < base);
-a[j] = i;
-
-let noRepeat = [];
-  nextInput:
-    for (let i = 0; i < a.length; i++) {
-      let str = a[i]; 
-      for (let j = 0; j < noRepeat.length; j++) { 
-        if (noRepeat[j] == str) continue nextInput; 
-      }
-      noRepeat.push(str);
+    // your implementation
+    let j = 0;
+    let i = 2;
+    let a = new Array();
+    do {
+        if (base % i === 0) {
+            a[j] = i;
+            j++;
+            base = base / i;
+        } else {
+            i++;
+        }
     }
-  let max = 0;
-  for (let i = 0; i < noRepeat.length; i++)
-  return Math.trunc(number / min);
-}
+    while (i < base);
+    a[j] = i;
 
+    let noRepeat = [];
+    nextInput:
+        for (let i = 0; i < a.length; i++) {
+            let str = a[i];
+            for (let j = 0; j < noRepeat.length; j++) {
+                if (noRepeat[j] == str) continue nextInput;
+            }
+            noRepeat.push(str);
+        }
+    let max = 0;
+    for (let i = 0; i < noRepeat.length; i++)
+        if (noRepeat[i] > max) max = noRepeat[i];
+    return Math.trunc(number / min);
+}
