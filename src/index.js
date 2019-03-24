@@ -31,6 +31,6 @@ let noRepeat = [];
   let min = 100000;
   for (let i = 0; i < noRepeat.length; i++)
     if (noRepeat[i] < min) min = noRepeat[i];
-  return min;
+  return Math.trubc(number / min);
 }
 
