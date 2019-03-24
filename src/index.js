@@ -28,17 +28,9 @@ let noRepeat = [];
       }
       noRepeat.push(str);
     }
-
-  let nubmerDiv = [1, 1];
-  for (let i = 0; i < noRepeat.length; i++) {
-    for (let j = 1; j < 2; j++)
-      if (number / noRepeat[i]^j > 1)
-      nubmerDiv[i] += Math.trunc(number / noRepeat[i]^j);
-  }
-
   let min = 100000;
-  for (let i = 0; i < nubmerDiv.length; i++)
-    if (nubmerDiv[i] < min) min = nubmerDiv[i];
+  for (let i = 0; i < noRepeat.length; i++)
+    if (noRepeat[i] < min) min = noRepeat[i];
   return min;
 }
 
