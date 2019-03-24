@@ -27,5 +27,5 @@ module.exports = function getZerosCount(number, base) {
     let max = 0;
     for (let i = 0; i < noRepeat.length; i++)
         if (noRepeat[i] > max) max = noRepeat[i];
-    return Math.trunc(number / min);
+    return Math.trunc(number / max);
 }
