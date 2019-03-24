@@ -24,8 +24,17 @@ module.exports = function getZerosCount(number, base) {
             }
             noRepeat.push(str);
         }
-    let max = 0;
-    for (let i = 0; i < noRepeat.length; i++)
-        if (noRepeat[i] > max) max = noRepeat[i];
-    return Math.trunc(number / max);
+    let numberDiv = [];
+    for (let i = 0; i < noRepeat.length; i++) {
+      numberDiv[i] = Math.trunc(number / noRepeat[i]);
+      for (let j = 2; j < 102; j++) {
+        if (number / Math.pow(noRepeat[i], j) > 0)
+        numberDiv[i] += Math.trunc(number / Math.pow(noRepeat[i], j));
+      }
+  }
+
+  let min = numberDiv[0];
+  for (let i = 0; i < numberDiv.length; i++)
+    if (numberDiv[i] < min) min = numberDiv[i];  
+    return min;
 }
