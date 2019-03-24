@@ -28,9 +28,8 @@ let noRepeat = [];
       }
       noRepeat.push(str);
     }
-  let min = 100000;
+  let max = 0;
   for (let i = 0; i < noRepeat.length; i++)
-    if (noRepeat[i] < min) min = noRepeat[i];
   return Math.trunc(number / min);
 }
 
